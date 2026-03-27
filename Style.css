@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    background: linear-gradient(160deg, hsl(24, 100%, 96%), hsl(12, 100%, 88%));
+    font-family: Arial, sans-serif;
+}
+
+#Calculator {
+    width: min(100%, 420px);
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px hsla(0, 0%, 0%, 0.22);
+}
+
+#DisplayPanel {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 20px 18px;
+    background: linear-gradient(180deg, hsl(0, 0%, 18%), hsl(0, 0%, 14%));
+}
+
+#Display {
+    font: arial;
+    width: 100%;
+    padding: 0;
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-align: right;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: whitesmoke;
+    cursor: default;
+    font-weight: 700;
+    min-height: 3.5rem;
+    display: block;
+    appearance: none;
+}
+
+#Keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 20px;
+}
+
+button {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: whitesmoke;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 40%);
+}
+
+button:active {
+    background-color: hsl(0, 0%, 50%);
+    transform: scale(0.96);
+}
+
+.operator-btn {
+    background-color: hsl(26, 95%, 55%);
+}
+
+.operator-btn:hover {
+    background-color: hsl(26, 95%, 62%);
+}
+
+.operator-btn:active {
+    background-color: hsl(26, 95%, 70%);
+}
+
+.clear-btn {
+    grid-column: 4;
+}
+
+#Displayhist {
+    width: 100%;
+    font-size: 0.95rem;
+    text-align: right;
+    color: hsla(0, 0%, 100%, 0.6);
+    min-height: 1.25rem;
+    line-height: 1.25rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
